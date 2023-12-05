@@ -5,17 +5,17 @@
 #include <cstring>
 #include "Student.h"
 
-class Node {
+class node {
     public:
-        Node(Student*); // creating the node requires passing in a student
-        ~Node(); // destructor for the node
-        Node* getNext(); // returns the pointer to the next node
-        Student* getStudent(); // returns the pointer to the student for this node
-        void setNext(Node*); // sets the pointer to the next node for linked list
+        node(student* currentStudent); // creating the node requires passing in a student
+        ~node(); // destructor for the node
+        node* getNext(); // returns the pointer to the next node
+        student* getStudent(); // returns the pointer to the student for this node
+        void setNext(node* nextNode); // sets the pointer to the next node for linked list
     private:
 
-        Node* nextNode; // pointer to the next node in the list
-        Student* student; // pointer to the student for the current node 
+        node* nextNode; // pointer to the next node in the list
+        student* currentStudent; // pointer to the student for the current node 
 };
 
 #endif

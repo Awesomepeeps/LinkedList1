@@ -4,20 +4,22 @@
 
 using namespace std;
 
-Node::Node(Student* studenttmp) : student(studenttmp) {
+node::node(student* studenttmp) : currentStudent(studenttmp) {
     nextNode = nullptr;
 }
 
-Node::~Node() {}
+node::~node() {
+    delete currentStudent;
+}
 
-Node* Node::getNext() {
+node* node::getNext() {
     return nextNode;
 }
 
-Student* Node::getStudent() {
-    return student;
+student* node::getStudent() {
+    return currentStudent;
 }
 
-void Node::setNext(Node* newNode) {
+void node::setNext(node* newNode) {
     nextNode = newNode;
 }
