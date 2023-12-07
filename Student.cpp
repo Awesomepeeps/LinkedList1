@@ -6,10 +6,7 @@ using namespace std;
 
 student::student(const char* firstnametmp, const char* lastnametmp, float gpatmp, int studentIDtmp) : firstname(firstnametmp), lastname(lastnametmp), gpa(gpatmp), studentID(studentIDtmp) {}
 
-student::~student() {
-    delete firstname;
-    delete lastname;
-}
+student::~student() {}
 
 const char* student::getFirstname(void) {
     return firstname;
